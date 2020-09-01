@@ -10,15 +10,18 @@
     Description: {{ product.description }}
   </p>
 
-    <button (click)="share()">
+  <button (click)="share()">
     Share
   </button>
-  <button (click)="share()">
-  Share
-</button>
 
 <app-product-alerts
-  [product]="product">
+ 
+  [product]="product" 
+  (notify)="onNotify()"> <!-- 
+  [product] >> Property binding - parsing data as a component to the child 
+  epidi to app product alerts ine child component prepei na tou dothei to product apo parent 
+  component - product list
+  (notify) >>Calling a function on the same file-->
 </app-product-alerts>
 
 </div>
